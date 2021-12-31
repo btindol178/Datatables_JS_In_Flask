@@ -1,0 +1,33 @@
+pip install virtualenv
+
+virtualenv venv --python=python3.5  # Calling version 3.5
+
+./venv/Scripts/activate.bat
+
+source venv/bin/activate
+
+pip install Flask-RESTful
+#######################################################
+Step 1) Start virtual enviornment 
+py -m venv venv
+
+Step 2) Activate the virtual env
+venv\Scripts\activate
+
+Step 3) Install Flask in virtual machine
+pip install flask
+
+Step 4) Install flask-wtf
+pip install flask-wtf
+
+
+
+pip install -r requirements.txt
+
+
+
+
+{
+    "title": "this is the title ",
+    "body": "this is the body "
+}
