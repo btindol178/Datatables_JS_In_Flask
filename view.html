@@ -1,0 +1,53 @@
+<script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/select/1.2.5/js/dataTables.select.min.js"></script>
+<script type="text/javascript" charset="utf8" src="https://editor.datatables.net/extensions/Editor/js/dataTables.editor.min.js"></script>
+
+<table id="myTable" class="table table-striped" style="width:100%" >
+            <thead>
+              <tr>
+            <th>Time</th>
+            <th>Mean Current</th>
+            <th>Vapour Pressure</th>
+            <th>Mean Voltage</th>
+            <th>Temperature</th>
+            <th>Humidity</th>
+            <th>Bar Pressure</th>
+            <th>RPM</th>
+            <th>Wind Sector</th>
+            <th>Wind Speed</th>
+            <th>Air Density</th>
+            <th>DC Voltage</th>                
+            <th>Power Sector</th>
+            <th>Furling Angle</th>
+            <th>Yaw angle</th>                                   
+          </tr>
+        </thead> 
+          </table>  
+<script>
+$(document).ready(function() {
+    $('#myTable').DataTable( {
+        "processing": true,
+        "ajax": "/page_test",
+        // add column definitions to map your json to the table                                           
+        "columns": [
+            {data: "time"},
+            {data: "MeanCurrent"},
+            {data: "VapourPressure"},
+            {data: "MeanVoltage"},
+            {data: "Temperature"},
+            {data: "Humidity"},
+            {data: "BarPressure"},
+            {data: "RPM"},
+            {data: "WindSector"},
+            {data: "WindSpeed"},
+            {data: "AirDensity"},
+            {data: "VoltageDC"},
+            {data: "PowerSec"},
+            {data: "FurlingAngle"},
+            {data: "YawAngle"}
+        ]
+    } );
+});
+</script>
